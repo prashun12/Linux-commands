@@ -1,0 +1,4 @@
+ #!/bin/bash
+
+
+    $ awk -F\" '{print $1}' access.log | awk '{print $1}' | sort | uniq -c | sort -r | tail -10
