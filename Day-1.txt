@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -d $usersecret ]
+then
+
+        export usersecret=dH34xJaa23
+        echo `env | grep usersecret`
+
+else
+        echo "error"
+fi
