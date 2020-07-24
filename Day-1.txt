@@ -1,0 +1,16 @@
+   code:-   #!/bin/bash
+
+for file in `ls *.txt`
+do
+
+         folderName=`echo $file | awk -F. '{print $1}'`
+         if [ -d $folderName ]
+         then
+                echo "folder not exits"
+
+
+         else
+                echo "folder already exits"
+
+         fi
+done
