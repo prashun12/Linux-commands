@@ -1,0 +1,6 @@
+ #!/bin/bash
+
+             Date1=$1
+             Date2=$2
+
+ cat access.log | awk '$4 >= "[ '${Date2}'" && $4 < "[i'${Date2}'"' |awk '{print $7}' | sort -n | uniq -c | tail -4
