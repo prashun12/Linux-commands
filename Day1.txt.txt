@@ -1,0 +1,15 @@
+#! /bin/bash
+touch abc.txt def.txt ghi.txt jkl.txt
+
+for filename in `ls *.txt`
+do
+
+          foldername=`echo $filename | awk -F. '{print $1}'`
+          if [ -d $foldername ]
+          then
+                   rm -r $foldername
+          fi
+          mkdir $foldername
+          cp $filename  $foldername
+          echo $filename "moved to" $foldername
+done
