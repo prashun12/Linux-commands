@@ -1,0 +1,3 @@
+#!/bin/bash
+
+               cat passwd.txt | grep -o -i "systemd" | wc -l
