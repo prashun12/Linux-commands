@@ -1,0 +1,11 @@
+  #!/bin/bash
+
+
+
+
+if  echo "hello"
+      then
+           echo "command  executed"
+      else
+            echo "command not executed"
+fi
