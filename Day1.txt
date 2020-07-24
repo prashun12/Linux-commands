@@ -1,0 +1,11 @@
+#! /bin/bash
+touch abc.log.1 def.log.1 ghi.log.1 jkl.log.1 mno.log.1
+for filename in `ls *.log.1`
+
+      do
+          echo $filename
+          foldername=`echo $filename | awk -F. '{print $1}'`
+          date=`date +"%d%m%y"`
+          mv $filename $foldername-$date".log"
+      done
+      ls *.log
